@@ -17,9 +17,7 @@
  * Define Global Variables
  * 
 */
-// navigation global var
 const navigation = document.getElementById('navbar__list');
-// sections global var
 const sections = document.querySelectorAll('section');
 
 /**
@@ -40,8 +38,8 @@ const sections = document.querySelectorAll('section');
 
 const navBuilder = () => {
 
-    let navUI = '';
-    // looping over all sections
+    let navUI = ``;
+    // looping all sections
     sections.forEach(section => {
 
         const sectionID = section.id;
@@ -51,16 +49,14 @@ const navBuilder = () => {
 
     });
     // append all elements to the navigation
-    navigation.innerHTML = navUI;
+    navigation.innerHTML=navUI;
 
 
 };
-
 navBuilder();
 
-// Add class 'active' to section when near top of viewport
 
-// getting the largest value that's less or equal to the number
+// Add class 'active' to section when near top of viewport
 const offset = (section) => {
     return Math.floor(section.getBoundingClientRect().top);
 };
@@ -78,7 +74,7 @@ const addActive = (conditional, section) => {
     };
 };
 
-//implementating the actual function
+//main function
 
 const sectionActivation = () => {
     sections.forEach(section => {
@@ -109,15 +105,3 @@ const scrolling = () => {
 };
 
 scrolling();
-
-/**
- * End Main Functions
- * Begin Events
- * 
-*/
-
-// Build menu 
-
-// Scroll to section on link click
-
-// Set sections as active
