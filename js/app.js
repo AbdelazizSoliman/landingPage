@@ -17,7 +17,7 @@
  * Define Global Variables
  * 
 */
-const navigation = document.getElementById('navbar__list');
+const nav = document.getElementById('navbar__list');
 const sections = document.querySelectorAll('section');
 
 /**
@@ -36,24 +36,24 @@ const sections = document.querySelectorAll('section');
 
 // build the nav
 
-const navBuilder = () => {
+const navImplement = () => {
 
-    let navUI = ``;
+    let navULI = ``;
     // looping all sections
     sections.forEach(section => {
 
         const sectionID = section.id;
         const sectionDataNav = section.dataset.nav;
 
-        navUI += `<li><a class="menu__link" href="#${sectionID}">${sectionDataNav}</a></li>`;
+        navULI += `<li><a class="menu__link" href="#${sectionID}">${sectionDataNav}</a></li>`;
 
     });
-    // append all elements to the navigation
-    navigation.innerHTML=navUI;
+    // append all elements to the nav
+    nav.innerHTML=navULI;
 
 
 };
-navBuilder();
+navimplement();
 
 
 // Add class 'active' to section when near top of viewport
