@@ -94,10 +94,10 @@ window.addEventListener('scroll' ,toggleActiveState);
 const scrolling = () => {
 
     const navlinks = document.querySelectorAll('.navbar__menu a');
-    links.forEach(link => {
+    navlinks.forEach(link => {
         link.addEventListener('click', () => {
             for(i = 0 ; i<sections ; i++){
-                sections[i].addEventListener("click",sectionScroll(navlink));
+                sections[i].addEventListener("click",sectionScroll(link));
             }
         });
     });
