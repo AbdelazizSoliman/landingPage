@@ -76,7 +76,7 @@ const addActive = (conditional, section) => {
 
 //main function
 
-const sectionActivation = () => {
+const toggleActiveState = () => {
     sections.forEach(section => {
         const elementOffset = offset(section);
 
@@ -87,17 +87,17 @@ const sectionActivation = () => {
     });
 };
 
-window.addEventListener('scroll' ,sectionActivation);
+window.addEventListener('scroll' ,toggleActiveState);
 
 // Scroll to anchor ID using scrollTO event
 
 const scrolling = () => {
 
-    const links = document.querySelectorAll('.navbar__menu a');
+    const navlinks = document.querySelectorAll('.navbar__menu a');
     links.forEach(link => {
         link.addEventListener('click', () => {
             for(i = 0 ; i<sections ; i++){
-                sections[i].addEventListener("click",sectionScroll(link));
+                sections[i].addEventListener("click",sectionScroll(navlink));
             }
         });
     });
