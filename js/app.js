@@ -10,7 +10,7 @@ const navigationMenu = () => {
         const sectionID = section.id;
         const sectionNav = section.dataset.nav;
 
-        navUlI += `<li><a class="menu__link" href="#${sectionID}">${sectionNav}</a></li>`;
+        navUI += `<li><a class="menu__link" href="#${sectionID}">${sectionNav}</a></li>`;
 
     });
     // append all elements to the navigation
