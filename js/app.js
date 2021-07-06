@@ -1,6 +1,7 @@
 const nav = document.getElementById('navbar__list');
 const sections = document.querySelectorAll('section');
 
+
 //Build the navigation menu
 const BuildTheNavigationMenu = () => {
     let navUI = ``;
@@ -47,3 +48,5 @@ for(section of section)
           }
 }
 }
+
+document.addEventListener('scroll',toggleActiveClass)
