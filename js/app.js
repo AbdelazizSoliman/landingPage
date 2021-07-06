@@ -33,11 +33,11 @@ function sectionINViewPort(element)
 //ditinguished viewd section from the other sections.
 function toggleActiveClass()
 {
-for(section of section) 
+for(section of sections) 
  {
    if(sectionINViewPort(section))
      {
-    if(! section.classlist.contains('your-active-class'))
+    if(!section.classlist.contains('your-active-class'))
     {
         section.classList.add('your-active-class');
         section.style.cssText = "background-color: green;";
