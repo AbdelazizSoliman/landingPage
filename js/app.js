@@ -37,7 +37,7 @@ for(section of sections)
  {
    if(sectionINViewPort(section))
      {
-    if(!section.classlist.contains('your-active-class'))
+    if(!section.classList.contains('your-active-class'))
     {
         section.classList.add('your-active-class');
     }
