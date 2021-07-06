@@ -40,6 +40,7 @@ for(section of section)
     if(! section.classlist.contains('your-active-class'))
     {
         section.classList.add('your-active-class');
+        section.style.cssText = "background-color: green;";
     }
 }
         else
