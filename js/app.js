@@ -21,3 +21,29 @@ const BuildTheNavigationMenu = () => {
 document.getElementById("myAnchor").addEventListener("click", function(event){
   event.preventDefault()
 });
+
+//check if section in view portt/closest to the top
+function sectionINViewPort(element)
+{
+    let sectionPosition=element.getBoundingClientRect();
+    return(sectionPosition.top>=0);
+    
+}
+//ditinguished viewd section from the other sections.
+function toggleActiveClass()
+{
+for(section of section) 
+ {
+   if(sectionINViewPort(section))
+     {
+    if(! section.classlist.contains('your-active-class'))
+    {
+        section.classList.add('your-active-class');
+    }
+}
+        else
+          {
+            section.classList.remove('your-active-class');
+          }
+}
+}
