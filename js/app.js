@@ -1,20 +1,23 @@
 const nav = document.getElementById('navbar__list');
 const sections = document.querySelectorAll('section');
 
-const navigationMenu = () => {
-
+//Build the navigation menu
+const BuildTheNavigationMenu = () => {
     let navUI = ``;
-    // looping all sections
-    sections.forEach(section => {
+    for(i=0; i<sections.length; i++){
 
-        const sectionID = section.id;
-        const sectionNav = section.dataset.nav;
+        const sectionID = sections[i].getAttribute('id');
+        const sectionDataNav = sections[i].dataset.nav;
+        const navUI =  `<li><a class="menu__link" href="#${sectionID}">${sectionDataNav}</a></li>`;
+        nav.innerHTML += navUI;
+    }
+   // classlist method
+    nav.children[0].children[0].classList.add('active') 
+}
 
-        navUI += `<li><a class="menu__link" href="#${sectionID}">${sectionNav}</a></li>`;
+ BuildTheNavigationMenu();
 
-    });
-    // append all elements to the navigation
-    nav.innerHTML=navUI;
-
-};
-navigationMenu();
+ 
+document.getElementById("myAnchor").addEventListener("click", function(event){
+  event.preventDefault()
+});
