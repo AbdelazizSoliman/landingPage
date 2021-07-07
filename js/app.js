@@ -40,12 +40,13 @@ for(section of sections)
     if(!section.classList.contains('your-active-class'))
     {
         section.classList.add('your-active-class');
-        section.style.cssText = "background-color: green;";
+        section.style.cssText = "background-color: green";
     }
 }
         else
           {
             section.classList.remove('your-active-class');
+            section.style.cssText = "background-color: blue";
           }
 }
 }
